@@ -17,11 +17,14 @@
 # converting Date and time to strptime format
  x<-strptime(x,"%d/%m/%Y %H:%M:%S")
 
-# plotting given plot on default device
+# opening png device
+ png(filename="plot2.png")
+
+# plotting given plot on png device
  plot(x, data$Global_active_power, type="l", ylab="Global Active Power (kilowatts)",xlab="" )
 
 # copying final image using png device to file plot2.png
- dev.copy(png,file="plot2.png")
+# dev.copy(png,file="plot2.png")
 
 # closing device handle
  dev.off()

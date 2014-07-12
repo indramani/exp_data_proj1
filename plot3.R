@@ -17,7 +17,10 @@
 # converting Date and time to strptime format
  x<-strptime(x,"%d/%m/%Y %H:%M:%S")
 
-# plotting given plot on default device
+# open plot3.png
+ png(filename = "plot3.png")
+
+# plotting given plot on png device
 # plotting Sub_metering_1 against datetime
  plot(x, data$Sub_metering_1, type="l", ylab="Energy sub metering",xlab="" )
 # adding line for Sub_metering_2 to plot
@@ -28,7 +31,7 @@
  legend("topright",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),col=c("black","red","blue"),lty=c(1,1,1))
 
 # copying final image using png device to file plot3.png
- dev.copy(png,file="plot3.png")
+# dev.copy(png,file="plot3.png")
 
 # closing device handle
  dev.off()

@@ -17,6 +17,9 @@
 # converting Date and time to strptime format
  x<-strptime(x,"%d/%m/%Y %H:%M:%S")
 
+# opening png device
+ png(filename="plot4.png")
+
 # setting 2x2 grid for 4 plots
  par(mfrow = c(2, 2))
 
@@ -39,7 +42,7 @@
 # plotting right-bottom chart for Global Reactive Power against datetime
  plot(x, data$Global_reactive_power, type="l", ylab="Global Reactive Power",xlab="datetime" )
 # copying final image using png device to file plot4.png
- dev.copy(png,file="plot4.png")
+# dev.copy(png,file="plot4.png")
 
 # closing device handle
  dev.off()

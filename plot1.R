@@ -11,11 +11,14 @@
 # setting column names to read data
  names(data)<-names(header)
 
-# plotting given histogram on default device
+# opening plot1.R
+ png(filename="plot1.png")
+
+# plotting given histogram on png device
  hist(data$Global_active_power,main="Gloabal Active Power",xlab="Global Active Power (kilowatts)",col="red")
 
 # copying final image using png device to file plot1.png
- dev.copy(png,file="plot1.png")
+# dev.copy(png,file="plot1.png")
 
 # closing device handle
  dev.off() 
